@@ -2,19 +2,14 @@ import React from "react";
 
 const Recipe = ({ title, calories, image, ingredients }) => {
 
-    const recipe = {
-            borderRadius: "10px",
-            boxShadow: "0px 5px 20px rgb(63, 60, 60)",
-            margin: "20px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-around",
-            alignItems: "center",
-            minWidth: "40%",
+    const styleRecipe = {
+        fontFamily: "Sofia, sans-serif",
+        width: "250px"        
     }
+
     return (
-        <div className="" style={recipe}>
-            <img className="w-100 p-2 rounded-1" src={image} alt="" /><br />
+        <div className="text-center mb-5 text-bg-light rounded-4 border border-dark shadow" style={styleRecipe}>
+            <img className="w-50 p-2 rounded-5 h-25" src={image} alt="" /><br />
             <h1>{title}</h1>
             <ol>
                 {ingredients.map(ingredient => (

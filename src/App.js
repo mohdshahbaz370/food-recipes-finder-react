@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import './App.css';
 import Recipe from './Recipe';
+import Header from './Header';
 
 const App = () => {
     const APP_ID = 'e47a1600';
@@ -29,16 +29,19 @@ const App = () => {
     }
 
     return (
-        <div className="container-fluid">
-            <div className="App">
-                <form className="search-form" onSubmit={getSearch} >
-                    <input className="search-bar" type="text" value={search}
-                        onChange={updateSearch} />
-                    <button className="search-button" type="submit" >
-                        Search
-                    </button>
+        <>
+            <Header />
+            <div className="text-bg-danger">
+                <form onSubmit={getSearch} >
+                    <div className="mx-auto input-group w-50">
+                        <input className="form-control" type="text" value={search}
+                            onChange={updateSearch} />
+                        <button className="btn btn-primary input-group-text" type="submit" >
+                            Search
+                        </button>
+                    </div>
                 </form>
-                <div className="recipes">
+                <div className="d-sm-flex flex-sm-row flex-wrap justify-content-sm-between">
                     {recipes.map(recipe => (
                         <Recipe
                             key={recipe.recipe.label}
@@ -47,11 +50,10 @@ const App = () => {
                             image={recipe.recipe.image}
                             ingredients={recipe.recipe.ingredients}
                         />
-
                     ))}
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
