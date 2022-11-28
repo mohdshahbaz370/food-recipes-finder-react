@@ -31,27 +31,25 @@ const App = () => {
     return (
         <>
             <Header />
-            <div className="text-bg-danger">
-                <form onSubmit={getSearch} >
-                    <div className="mx-auto input-group w-50">
-                        <input className="form-control" type="text" value={search}
-                            onChange={updateSearch} />
-                        <button className="btn btn-primary input-group-text" type="submit" >
-                            Search
-                        </button>
-                    </div>
-                </form>
-                <div className="d-sm-flex flex-sm-row flex-wrap justify-content-sm-between">
-                    {recipes.map(recipe => (
-                        <Recipe
-                            key={recipe.recipe.label}
-                            title={recipe.recipe.label}
-                            calories={recipe.recipe.calories}
-                            image={recipe.recipe.image}
-                            ingredients={recipe.recipe.ingredients}
-                        />
-                    ))}
+            <form className="my-5" onSubmit={getSearch} >
+                <div className="mx-auto input-group w-50">
+                    <input className="form-control" type="text" value={search}
+                        onChange={updateSearch} />
+                    <button className="btn btn-primary input-group-text" type="submit" >
+                        Search
+                    </button>
                 </div>
+            </form>
+            <div className="d-sm-flex flex-sm-row flex-wrap justify-content-sm-center">
+                {recipes.map(recipe => (
+                    <Recipe
+                        key={recipe.recipe.label}
+                        title={recipe.recipe.label}
+                        calories={recipe.recipe.calories}
+                        image={recipe.recipe.image}
+                        ingredients={recipe.recipe.ingredients}
+                    />
+                ))}
             </div>
         </>
     );
