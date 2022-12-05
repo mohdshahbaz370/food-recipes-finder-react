@@ -33,7 +33,7 @@ const App = () => {
             <Header />
             <form className="my-5" onSubmit={getSearch} >
                 <div className="mx-auto input-group w-50">
-                    <input className="form-control" type="text" placeholder="Search..." value={search}
+                    <input className="form-control" type="text" placeholder="Search here for food recipes..." value={search}
                         onChange={updateSearch} />
                     <button className="btn btn-primary input-group-text" type="submit" >
                         Search
