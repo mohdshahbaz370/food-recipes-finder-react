@@ -32,25 +32,27 @@ const App = () => {
     return (
         <>
             <Header />
-            <form className="my-5" onSubmit={getSearch} >
-                <div id="searchButton" className="mx-auto input-group">
-                    <input className="form-control" type="text" placeholder="Search here for food recipes..." value={search}
-                        onChange={updateSearch} />
-                    <button className="btn btn-primary input-group-text" type="submit" >
-                        Search
-                    </button>
+            <div className="container-fluid">
+                <form className="my-5" onSubmit={getSearch} >
+                    <div id="searchButton" className="mx-auto input-group">
+                        <input className="form-control" type="text" placeholder="Search here for food recipes..." value={search}
+                            onChange={updateSearch} />
+                        <button className="btn btn-primary input-group-text" type="submit" >
+                            Search
+                        </button>
+                    </div>
+                </form>
+                <div id="flexContainer" className="d-flex flex-wrap justify-content-center">
+                    {recipes.map(recipe => (
+                        <Recipe
+                            key={recipe.recipe.label}
+                            title={recipe.recipe.label}
+                            calories={recipe.recipe.calories}
+                            image={recipe.recipe.image}
+                            ingredients={recipe.recipe.ingredients}
+                        />
+                    ))}
                 </div>
-            </form>
-            <div id="flexContainer" className="d-flex flex-wrap justify-content-center">
-                {recipes.map(recipe => (
-                    <Recipe
-                        key={recipe.recipe.label}
-                        title={recipe.recipe.label}
-                        calories={recipe.recipe.calories}
-                        image={recipe.recipe.image}
-                        ingredients={recipe.recipe.ingredients}
-                    />
-                ))}
             </div>
         </>
     );
