@@ -1,0 +1,14 @@
+#searchButton {
+    width: 50%;
+}
+
+@media only screen and (max-width: 576px) {
+    #searchButton {
+        width: 100%;
+    }
+
+    #flexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}

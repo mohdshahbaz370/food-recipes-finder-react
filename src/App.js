@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Recipe from './Recipe';
 import Header from './Header';
+import './App.css';
 
 const App = () => {
     const APP_ID = 'e47a1600';
     const APP_KEY = '9a557039e0971d151ab37e1d5a586440';
     const [recipes, setRecipes] = useState([]);
     const [search, setSearch] = useState("");
-    const [query, setQuery] = useState("chicken");
+    const [query, setQuery] = useState("biryani");
     useEffect(() => {
         getRecipes();
     }, [query])
@@ -32,7 +33,7 @@ const App = () => {
         <>
             <Header />
             <form className="my-5" onSubmit={getSearch} >
-                <div className="mx-auto input-group w-50">
+                <div id="searchButton" className="mx-auto input-group">
                     <input className="form-control" type="text" placeholder="Search here for food recipes..." value={search}
                         onChange={updateSearch} />
                     <button className="btn btn-primary input-group-text" type="submit" >
@@ -40,7 +41,7 @@ const App = () => {
                     </button>
                 </div>
             </form>
-            <div className="d-sm-flex flex-sm-row flex-wrap justify-content-sm-center">
+            <div id="flexContainer" className="d-flex flex-wrap justify-content-center">
                 {recipes.map(recipe => (
                     <Recipe
                         key={recipe.recipe.label}
