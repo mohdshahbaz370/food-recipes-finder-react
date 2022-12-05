@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/food-recipes-finder-react/static/js/main.dcf71bfb.js",
+    "index.html": "/food-recipes-finder-react/index.html",
+    "main.dcf71bfb.js.map": "/food-recipes-finder-react/static/js/main.dcf71bfb.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.dcf71bfb.js"
+  ]
+}
