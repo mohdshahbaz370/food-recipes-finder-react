@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/food-recipes-finder-react/static/css/main.6df2fdeb.css",
-    "main.js": "/food-recipes-finder-react/static/js/main.1e9c6e64.js",
+    "main.js": "/food-recipes-finder-react/static/js/main.8a39055f.js",
     "index.html": "/food-recipes-finder-react/index.html",
     "main.6df2fdeb.css.map": "/food-recipes-finder-react/static/css/main.6df2fdeb.css.map",
-    "main.1e9c6e64.js.map": "/food-recipes-finder-react/static/js/main.1e9c6e64.js.map"
+    "main.8a39055f.js.map": "/food-recipes-finder-react/static/js/main.8a39055f.js.map"
   },
   "entrypoints": [
     "static/css/main.6df2fdeb.css",
-    "static/js/main.1e9c6e64.js"
+    "static/js/main.8a39055f.js"
   ]
 }
