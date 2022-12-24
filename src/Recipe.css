@@ -1,6 +1,13 @@
 #recipe {
+    width: 500px;
+}
+
+h1 {
     font-family: Sofia, sans-serif;
-    width: 420px;
+}
+
+li {
+    font-size: 1.2em;
 }
 
 @media only screen and (max-width: 576px) {
